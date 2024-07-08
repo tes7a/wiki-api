@@ -1,0 +1,33 @@
+@use '/src/assets/styles/mixins' as m;
+@use '/src/assets/styles/fonts_schema' as *;
+@use '/src/assets/styles/theme_colors_scheme' as *;
+
+.events {
+  @include m.fonts(
+    $caption1-weight,
+    $caption1-size,
+    $caption1-line-height,
+    $caption1-letter-spacing
+  );
+
+  &__item {
+    border-bottom: 1px solid $grey-7;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 9px;
+      gap: 20px;
+    }
+  }
+
+  &__more-information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__accordion-more-information {
+    height: 40px;
+  }
+}

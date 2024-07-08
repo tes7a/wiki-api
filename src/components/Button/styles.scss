@@ -1,0 +1,21 @@
+@use '/src/assets/styles/mixins' as m;
+@use '/src/assets/styles/fonts_schema' as *;
+@use '/src/assets/styles/theme_colors_scheme' as *;
+
+.button {
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 11px 25px;
+  margin: 0;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+
+  @include m.fonts(
+    $caption1-weight,
+    $caption1-size,
+    $caption1-line-height,
+    $caption1-letter-spacing
+  );
+}

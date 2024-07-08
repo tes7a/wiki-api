@@ -1,0 +1,73 @@
+@use '/src/assets/styles/mixins' as m;
+@use '/src/assets/styles/theme_colors_scheme' as *;
+@use '/src/assets/styles/fonts_schema' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 600px;
+  padding: 15px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 55px;
+  border: 1px solid $secondary-900;
+  box-shadow: 0 4px 11px 4px $background-overlay-light;
+
+  @include m.fonts(
+    $caption1-weight,
+    $caption1-size,
+    $caption1-line-height,
+    $caption1-letter-spacing
+  );
+
+  &__selectors {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  &__date {
+    .react-datepicker__input-container input {
+      width: 100px;
+      height: 40px;
+      border: 1px solid $secondary-900;
+      border-radius: 4px;
+      padding: 6px;
+    }
+  }
+
+  .button {
+    border: 1px solid $secondary-900;
+    color: $secondary-900;
+    background-color: inherit;
+
+    svg {
+      fill: $secondary-900;
+    }
+  }
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 40px;
+  gap: 2px;
+  padding: 6px;
+  border: 1px solid $secondary-900;
+  border-radius: 4px;
+
+  fill: $secondary-900;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

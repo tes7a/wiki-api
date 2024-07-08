@@ -1,0 +1,42 @@
+@use '/src/assets/styles/fonts_schema' as *;
+@use '/src/assets/styles/theme_colors_scheme' as *;
+@use 'react-datepicker/src/stylesheets/datepicker' as *;
+
+html,
+body {
+  height: 100%;
+  min-width: 330px;
+  width: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: $font-family;
+}
+
+#root {
+  background-color: $primary-a-100;
+  min-height: 100%;
+  text-align: center;
+  width: 100%;
+  overflow-y: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:disabled,
+button:disabled {
+  cursor: not-allowed;
+}
+
+button:disabled label {
+  pointer-events: none;
+}
